@@ -1,0 +1,40 @@
+body{
+    background: #f8f8e8;
+    font-family: Helvetica;
+    font-weight: lighter;
+}
+h1, h2, h3, h4, h5, h6{
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background: burlywood;
+}
+p{
+    color: #787878;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+    text-align: left;
+}
+.list_with_img {
+    /*list-style-type: square;*/
+    list-style-image: url("../img/rocket.svg");
+}
+
+ul {
+    list-style-image: url("/static/img/rocket.svg");
+}
+
+ol{
+    list-style-image: None;
+}
+.main_img{
+    border: #f1c48f solid 2px;
+}
+.main-menu{
+    color: black;
+    font-size: 20px;
+    list-style: None;
+    line-height: 24px;
+
+}

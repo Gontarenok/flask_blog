@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Форма работы с БД
+{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <form class="col-10" action="/{{ do }}/" method="post">
+            <fieldset>
+                <legend>Истории из Базы Данных</legend>
+                <p>
+                    <label>
+                        <input type="text" name="db_id" value="{{ db_id }}" readonly>
+                        Id записи
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="text" name="head" value="{{ head }}">
+                        Название истории
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="text" name="story" value="{{ story }}">
+                        Текст истории
+
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="checkbox" name="visible" {% if visible %} checked {% endif %}>
+                        Видимый / Невидимый
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        <input type="password" name="password">
+                        Пароль администратора
+                    </label>
+                </p>
+            </fieldset>
+            <p>
+                <input type="submit" value="обновить данные в Базе Данных">
+            </p>
+        </form>
+    </div>
+{% endblock %}

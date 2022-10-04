@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    My blog
+{% endblock %}
+
+{% block content %}
+
+        <div class="row">
+            <h1 class="col-12">
+            {% if hello %}
+                {{ hello }}
+            {% else %}
+                Hello everyone
+            {% endif %}
+            </h1>
+
+            <img class="col-md-5 col-12 img-fluid rounded-circle main_img" src="/static/img/photo.jpg" alt="My photo">
+
+            <div class="col-md-7 col-12">
+                {{ about_me | safe }}
+            </div>
+        </div>
+
+{% endblock %}

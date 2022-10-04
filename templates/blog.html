@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Blog
+{% endblock %}
+
+{% block content %}
+
+    <div class="row padding-bottom">
+        <h1 class="col-12">
+            My blog posts
+        </h1>
+        {% for story in stories %}
+            <div class="col-12 col-md-6 col-lg-4">
+                <h2> {{ story.head }} </h2>
+                <p> {{ story.text|safe }}</p>
+                {% if story.image %}
+                    <img src="/static/img/{{ story.image }}" class="img-fluid rounded" alt="image" >
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}
