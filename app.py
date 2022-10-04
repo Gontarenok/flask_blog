@@ -7,6 +7,7 @@ import sqlite3
 
 app = Flask(__name__)
 
+# итоговый вариант блога
 
 @app.route('/')
 @app.route('/index/')
